@@ -2,7 +2,7 @@ NAME = App
 
 FLAGS = -Wall -Wextra -Werror -std=c++17
 
-SRC = main.cpp  Utils.cpp
+SRC = main.cpp  
 
 CXX = c++
 
