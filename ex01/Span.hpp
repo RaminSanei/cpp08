@@ -16,9 +16,10 @@ class Span {
         ~Span();
         Span &operator=(const Span &rhs);
         void addNumber(int n);
-        void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+        void addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
         int shortestSpan();
         int longestSpan();
+        const std::vector<int>& getVec() const;
         class NoSpanException : public std::exception {
             public:
                 virtual const char *what() const throw();
@@ -28,5 +29,7 @@ class Span {
                 virtual const char *what() const throw();
         };
 };
+
+std::ostream &operator<<(std::ostream &o,  Span &span);
 
 #endif
